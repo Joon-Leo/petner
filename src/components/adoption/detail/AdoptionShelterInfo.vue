@@ -32,11 +32,11 @@ const props = defineProps<{
         </tr>
         <tr>
           <th scope="row" class="th-gray-3">담당자</th>
-          <td>{{ shelter.chargeNm }}</td>
+          <td>{{ shelter.careNm }}</td>
         </tr>
         <tr>
           <th scope="row" class="th-gray-3">담당자 연락처</th>
-          <td>{{ shelter.officetel }}</td>
+          <td>{{ shelter.careTel }}</td>
         </tr>
       </tbody>
     </table>

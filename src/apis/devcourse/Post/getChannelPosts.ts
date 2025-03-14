@@ -14,7 +14,7 @@ export interface GetChannelPostsResponse {
 export async function getChannelPosts(
   request: GetChannelPostsRequest,
 ): Promise<GetChannelPostsResponse> {
-  const response = await devAPI.get(POST.getChannelPost(request.channelId), {
+  const response = await devAPI.get<devPost[]>(POST.getChannelPost(request.channelId), {
     params: {
       offset: request.offset,
       limit: request.limit,
