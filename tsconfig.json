@@ -1,11 +1,18 @@
+// tsconfig.json (최상위)
 {
+  // 전역 컴파일 옵션 (하위 tsconfig에서 별도로 override될 수 있음)
+  "compilerOptions": {
+    // 라이브러리 .d.ts 파일에서 발생하는 오류를 무시
+    "skipLibCheck": true,
+
+    // 타입 오류가 있어도 빌드 산출물을 emit
+    "noEmitOnError": false
+
+    // 필요하다면 엄격 모드 off
+    // "strict": false
+  },
   "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    }
-  ]
+
+  // 하위 tsconfig 2개를 참조
+  "references": [{ "path": "./tsconfig.node.json" }, { "path": "./tsconfig.app.json" }]
 }
